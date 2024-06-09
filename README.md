@@ -1,10 +1,10 @@
 # Encontre o Tesouro!
 
-Este é um projeto especial de Dia dos Namorados criado para proporcionar uma experiência interativa e romântica. Nele, Lucas poderá descobrir mensagens ocultas clicando em quadrados que revelam sentimentos e intenções cuidadosamente selecionados.
+Este é um projeto especial criado para proporcionar uma experiência interativa e romântica. Nele, você vai descobrir mensagens ocultas clicando em quadrados que revelam sentimentos e intenções cuidadosamente selecionados.
 
 ## Como Funciona
 
-Ao abrir a página, Lucas encontrará uma grade com nove quadrados, cada um contendo um emoji. Cada clique em um quadrado revelará uma mensagem especial. Uma vez que todas as mensagens forem reveladas, um botão será exibido, levando a uma surpresa musical final.
+Ao abrir a página, você encontrará uma grade com nove quadrados, cada um contendo um emoji. Cada clique em um quadrado revelará uma mensagem especial. Uma vez que todas as mensagens forem reveladas, um botão será exibido, levando a uma surpresa musical final.
 
 ## Tecnologias Utilizadas
 
@@ -19,15 +19,3 @@ Utilizamos HTML para estruturar a página, CSS para estilização e dar vida à 
 1. Abra o arquivo `index.html` em qualquer navegador moderno.
 2. Clique nos quadrados para descobrir as mensagens.
 3. Após revelar todas as mensagens, clique no botão para acessar uma surpresa musical especial.
-
-## Personalização
-
-Você pode personalizar as mensagens e o link da surpresa musical editando o script JavaScript no final do arquivo HTML.
-
-```html
-<script>
-    const messages = [
-        (...)
-    ];
-    // ...
-</script>
