@@ -1,4 +1,4 @@
-# Encontre o Tesouro, Lucas!
+# Encontre o Tesouro!
 
 Este é um projeto especial de Dia dos Namorados criado para proporcionar uma experiência interativa e romântica. Nele, Lucas poderá descobrir mensagens ocultas clicando em quadrados que revelam sentimentos e intenções cuidadosamente selecionados.
 
