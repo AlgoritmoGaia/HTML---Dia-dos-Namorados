@@ -27,9 +27,7 @@ Você pode personalizar as mensagens e o link da surpresa musical editando o scr
 ```html
 <script>
     const messages = [
-        "Lucas, desde o momento que vi seu perfil, senti algo especial.",
         (...)
-        "Estou ansioso para criar novas memórias ao seu lado."
     ];
     // ...
 </script>
