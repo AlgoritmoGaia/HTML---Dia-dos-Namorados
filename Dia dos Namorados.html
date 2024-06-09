@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encontre o Tesouro, Lucas!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Quicksand:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #ffe6f0;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        h1 {
+            font-family: 'Lobster', cursive;
+            font-size: 2.5em;
+            color: #ff66b2;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .cell {
+            width: 150px;
+            height: 150px;
+            background-color: #ffccf2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 1.2em;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .cell.clicked {
+            background-color: #ff99e6;
+            transform: scale(0.95);
+            cursor: default;
+        }
+
+        .button {
+            background-color: #ff66b2;
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+        }
+
+        .button:hover {
+            background-color: #cc0099;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Media query for devices with a max width of 600px */
+        @media (max-width: 600px) {
+            .board {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Encontre o Tesouro, Lucas!</h1>
+
+    <div class="container">
+        <div class="board" id="board">
+            <div class="cell" onclick="revealMessage(this, 1)">💖</div>
+            <div class="cell" onclick="revealMessage(this, 2)">🎁</div>
+            <div class="cell" onclick="revealMessage(this, 3)">🌟</div>
+            <div class="cell" onclick="revealMessage(this, 4)">💌</div>
+            <div class="cell" onclick="revealMessage(this, 5)">😍</div>
+            <div class="cell" onclick="revealMessage(this, 6)">🎶</div>
+            <div class="cell" onclick="revealMessage(this, 7)">😊</div>
+            <div class="cell" onclick="revealMessage(this, 8)">📸</div>
+            <div class="cell" onclick="revealMessage(this, 9)">🌹</div>
+        </div>
+    </div>
+
+    <a class="button" href="https://www.youtube.com/watch?v=-BjZmE2gtdo" target="_blank" id="finalButton">Clique aqui para uma surpresa especial!</a>
+
+    <div class="footer">
+        <p>Com amor, gameboy</p>
+    </div>
+
+    <script>
+        const messages = [
+            "Lucas, desde o momento que vi seu perfil, senti algo especial.",
+            "Cada conversa nossa foi um passo para algo mais profundo.",
+            "Tenho uma vontade imensa de te levar aos meus lugares favoritos.",
+            "Quero que você conheça o meu mundo e todas as coisas que amo.",
+            "Você é a pessoa que me fez querer esquecer todas as outras.",
+            "Não sei como cheguei até aqui sem você.",
+            "Espero que um dia possamos rir e lembrar de quando no conhecemos.",
+            "Tenho tanto para te mostrar e compartilhar.",
+            "Estou ansioso para criar novas memórias ao seu lado."
+        ];
+        let currentMessageIndex = 0;
+
+        function revealMessage(cell, cellNumber) {
+            if (!cell.classList.contains('clicked')) {
+                cell.innerHTML = messages[currentMessageIndex];
+                cell.classList.add('clicked');
+                currentMessageIndex++;
+
+                if (currentMessageIndex >= messages.length) {
+                    document.getElementById('finalButton').style.display = 'inline-block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
